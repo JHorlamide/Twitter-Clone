@@ -1,23 +1,22 @@
-/*** NOTE: Bem Naming Convention will be used through out this build***/
 import React from "react";
 import "./App.css";
 
-/* Custom Components */
+/* Custom Component */
 import Sidebar from "./Components/Sidebar/Sidebar";
 import Feed from "./Components/Feed/Feed";
-import Widgets from "./Components/Widgets/Widgets";
+import Widgets from './Components/Widgets/Widgets';
 
 function App() {
   return (
     <div className="app">
-      {/* Sidebar */}
+      {/* sidebar */}
       <Sidebar />
 
       {/* Feed */}
       <Feed />
 
       {/* Widgets */}
-      <Widgets />
+      <Widgets/>
     </div>
   );
 }
