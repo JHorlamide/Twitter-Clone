@@ -6,7 +6,6 @@ import TweetBox from '../TweetBox/TweetBox';
 import Post from '../Post/Post';
 
 const Feed = () => {
-  console.log('object')
   return (
     <div className="feed">
       {/* Header */}
