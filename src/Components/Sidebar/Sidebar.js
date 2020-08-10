@@ -1,11 +1,11 @@
 import React from "react";
-import "./Sidebar.css";
+import "./sidebar.css";
 
-/* Icon to be used (Material UI Icon) */
+/* Material Icon */
 import TwitterIcon from "@material-ui/icons/Twitter";
 import HomeIcon from "@material-ui/icons/Home";
 import SearchIcon from "@material-ui/icons/Search";
-import NotificationIcon from "@material-ui/icons/Notifications";
+import NotificationsIcon from "@material-ui/icons/Notifications";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
 import BookmarkBorderIcon from "@material-ui/icons/BookmarkBorder";
 import ListAltIcon from "@material-ui/icons/ListAlt";
@@ -14,7 +14,7 @@ import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import { Button } from "@material-ui/core";
 
 /* Custom Component */
-import SidebarOption from "./SidebarOption";
+import SidebarOption from ".././SidebarOption/SidebarOption";
 
 const Sidebar = () => {
   return (
@@ -22,17 +22,17 @@ const Sidebar = () => {
       {/* Twitter icon */}
       <TwitterIcon className='sidebar__twitterIcon'/>
 
-      {/* SidearOption */}
-      <SidebarOption active Icon={HomeIcon} text="Home" />
-      <SidebarOption Icon={SearchIcon} text="Explore" />
-      <SidebarOption Icon={NotificationIcon} text="Notifications" />
+      {/* sidebarOption*/}
+      <SidebarOption active text="Home" Icon={HomeIcon} />
+      <SidebarOption text="Explore" Icon={SearchIcon} />
+      <SidebarOption text="Notifications" Icon={NotificationsIcon} />
       <SidebarOption text="Messages" Icon={MailOutlineIcon} />
       <SidebarOption text="BookMarks" Icon={BookmarkBorderIcon} />
       <SidebarOption text="Lists" Icon={ListAltIcon} />
       <SidebarOption text="Profile" Icon={PermIdentityIcon} />
       <SidebarOption text="More" Icon={MoreHorizIcon} />
 
-      {/* Button */}
+      {/* Buttone -> Twitter */}
       <Button variant="outlined" className="sidebar__tweet" fullWidth>
         Tweet
       </Button>

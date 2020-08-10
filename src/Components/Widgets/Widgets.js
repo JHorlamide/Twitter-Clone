@@ -4,7 +4,7 @@ import './Widgets.css';
 const Widgets = () => {
   return (
     <div className='widgets'>
-      <h2>This widgets</h2>
+      <h2>Widgets</h2>
     </div>
   )
 }
