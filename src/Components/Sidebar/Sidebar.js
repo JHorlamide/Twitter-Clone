@@ -1,5 +1,5 @@
 import React from "react";
-import "./sidebar.css";
+import "./Sidebar.css";
 
 /* Material Icon */
 import TwitterIcon from "@material-ui/icons/Twitter";
@@ -20,7 +20,7 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       {/* Twitter icon */}
-      <TwitterIcon className='sidebar__twitterIcon'/>
+      <TwitterIcon className="sidebar__twitterIcon" />
 
       {/* sidebarOption*/}
       <SidebarOption active text="Home" Icon={HomeIcon} />

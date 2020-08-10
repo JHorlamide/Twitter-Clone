@@ -2,8 +2,8 @@ import React from "react";
 import "./Feed.css";
 
 /* Custom Component */
-import TweetBox from '../TweetBox/TweetBox';
-import Post from '../Post/Post';
+import TweetBox from "../TweetBox/TweetBox";
+import Post from "../Post/Post";
 
 const Feed = () => {
   return (
@@ -16,10 +16,8 @@ const Feed = () => {
       {/* TweetBox */}
       <TweetBox />
 
-
       {/* Post */}
-      <Post/>
-      {/* Post */}
+      <Post />
     </div>
   );
 };
