@@ -2,6 +2,7 @@ import React from "react";
 import './Feed.css';
 
 const Feed = () => {
+  console.log('object')
   return (
     <div className='feed'>
       {/* Header */}
