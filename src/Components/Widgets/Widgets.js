@@ -25,21 +25,21 @@ const Widgets = () => {
       {/* Widgets Container */}
       <div className="widgets__widgetContainer">
         <h2>What's happening</h2>
+        <TwitterTweetEmbed tweetId={"858551177860055040"} />
 
         {/* Am facing errors with this line of code. Please help */}
         <TwitterTimelineEmbed
           sourceType="profile"
           screenName="J_Horlamide"
           options={{ height: 400 }}
-          tweetId={""}
+        />
+
+        {/* Am facing errors with this line of code. Please help */}
+        <TwitterShareButton
+          url={"https://facebook.com/cleverprogrammer"}
+          options={{ text: "#reactjs is awesome", via: "J_Horlamide" }}
         />
       </div>
-
-      {/* Am facing errors with this line of code. Please help */}
-      <TwitterShareButton
-        url={"https://facebook.com/cleverprogrammer"}
-        options={{ text: "#reactjs is awesome", via: "J_Horlamide" }}
-      />
     </div>
   );
 };
