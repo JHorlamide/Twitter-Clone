@@ -26,7 +26,7 @@ const Widgets = () => {
       <div className="widgets__widgetContainer">
         <h2>What's happening</h2>
 
-        {/* Am facing errors with line of code. Please help */}
+        {/* Am facing errors with this line of code. Please help */}
         <TwitterTimelineEmbed
           sourceType="profile"
           screenName="J_Horlamide"
@@ -35,7 +35,7 @@ const Widgets = () => {
         />
       </div>
 
-      {/* Am facing errors with line of code. Please help */}
+      {/* Am facing errors with this line of code. Please help */}
       <TwitterShareButton
         url={"https://facebook.com/cleverprogrammer"}
         options={{ text: "#reactjs is awesome", via: "J_Horlamide" }}
