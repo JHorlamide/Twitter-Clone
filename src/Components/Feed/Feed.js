@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Feed.css";
+import FlipMove from "react-flip-move";
 
 /* Custom Component */
 import TweetBox from "../TweetBox/TweetBox";
@@ -10,7 +11,12 @@ const Feed = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    
+    db.collection("posts").onSnapshot((snapshot) => {
+      return setPosts(
+        snapshot.docs.map((doc) => doc.data())
+      );
+    });
+    console.log(posts);
   }, []);
 
   return (
@@ -24,14 +30,21 @@ const Feed = () => {
       <TweetBox />
 
       {/* Post */}
-      <Post
-        displayName="Olamide"
-        text="I challeng you to build a twitter clone with React"
-        username="J_Horlamide"
-        image="https://media3.giphy.com/media/65ATdpi3clAdjomZ39/giphy.gif"
-        avatar="https://pbs.twimg.com/profile_images/1206671022524645381/v9yd8z4T_x96.jpg"
-        verified={true}
-      />
+      <FlipMove>
+        {posts.map((post) => {
+          return (
+            <Post
+              key={post.id}
+              displayName={post.displayName}
+              text={post.text}
+              username={post.username}
+              image={post.image}
+              avatar={post.avatar}
+              verified={true}
+            />
+          );
+        })}
+      </FlipMove>
     </div>
   );
 };
