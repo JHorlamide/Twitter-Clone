@@ -25,6 +25,8 @@ const Widgets = () => {
       {/* Widgets Container */}
       <div className="widgets__widgetContainer">
         <h2>What's happening</h2>
+
+        {/* Am facing errors with this line of code. Please help */}
         <TwitterTweetEmbed tweetId={"858551177860055040"} />
 
         {/* Am facing errors with this line of code. Please help */}

@@ -4,7 +4,7 @@ import "./App.css";
 /* Custom Component */
 import Sidebar from "./Components/Sidebar/Sidebar";
 import Feed from "./Components/Feed/Feed";
-import Widgets from './Components/Widgets/Widgets';
+import Widgets from "./Components/Widgets/Widgets";
 
 function App() {
   return (
@@ -16,7 +16,9 @@ function App() {
       <Feed />
 
       {/* Widgets */}
-      <Widgets/>
+      <React.StrictMode>
+        <Widgets />
+      </React.StrictMode>
     </div>
   );
 }
