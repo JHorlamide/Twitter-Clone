@@ -10,6 +10,8 @@ import db from "../Config/Firebase";
 const Feed = () => {
   const [posts, setPosts] = useState([]);
 
+  /*** Adding posts ***/
+
   useEffect(() => {
     db.collection("posts").onSnapshot((snapshot) => {
       return setPosts(
