@@ -13,11 +13,14 @@ const Feed = () => {
   useEffect(() => {
     db.collection("posts").onSnapshot((snapshot) => {
       return setPosts(
-        snapshot.docs.map((doc) => doc.data())
+        snapshot.docs.map((doc) => {
+          return { res: doc.data(), id: doc.id };
+        })
       );
     });
-    console.log(posts);
   }, []);
+
+  console.log("From Feed: ", posts);
 
   return (
     <div className="feed">
@@ -34,7 +37,7 @@ const Feed = () => {
         {posts.map((post) => {
           return (
             <Post
-              key={post.id}
+              key={post.id.id}
               displayName={post.displayName}
               text={post.text}
               username={post.username}

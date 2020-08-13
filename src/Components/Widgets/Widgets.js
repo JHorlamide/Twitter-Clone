@@ -1,4 +1,4 @@
-import React from "react";
+import React, {forwardRef} from "react";
 import "./Widgets.css";
 
 /* Material UI Icons */
@@ -13,9 +13,9 @@ import {
 
 // <TwitterTweetEmbed tweetId={"858551177860055040"} />;
 
-const Widgets = () => {
+const Widgets = forwardRef(({props}, ref) => {
   return (
-    <div className="widgets">
+    <div className="widgets" ref={ref}>
       {/* Input Widgest */}
       <div className="widgets__input">
         <SearchIcon className="widgets__searchIcon" />
@@ -44,6 +44,6 @@ const Widgets = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Widgets;
